@@ -5,7 +5,7 @@ This React project creates a simple web application that fetches a dad joke from
 
 ## Initial Joke Load:
 
-The component initially loads with an empty joke.
+The component initially loads with an empty joke.</>
 The useEffect hook is used to fetch a joke from the API when the component mounts.
 The fetched joke is then stored in the component's state using the setJoke function.
 
