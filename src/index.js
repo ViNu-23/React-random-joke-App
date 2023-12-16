@@ -4,8 +4,10 @@ import ReactDOM from "react-dom/client";
 import axios from "axios";
 
 function Main() {
-  const [joke, setJoke] = useState("");
-  const [buttonColor, setButtonColor] = useState("#3498db");
+  const [joke, setJoke] = useState("");//for jokes api
+  const [buttonColor, setButtonColor] = useState("#3498db");//for random color
+
+  //fetching api
   async function getData() {
     try {
       const response = await axios.get("https://icanhazdadjoke.com/", {
@@ -18,19 +20,23 @@ function Main() {
       console.log(`API Fetch error ${error}`);
     }
   }
-  console.log(joke);
+
+  //fetch joke only once 
   useEffect(() => {
     getData();
   }, []);
 
+  //getting new joke and assigning random color to randomButton color
   function handleClick() {
     const randomButtonColor = getRandomColor();
     setButtonColor(randomButtonColor);
     getData();
   }
+  //generating random color
   function getRandomColor() {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
+
   return (
     <div className="container">
       <h1 style={{ color: buttonColor }}>Try Not to Laugh 😂</h1>
