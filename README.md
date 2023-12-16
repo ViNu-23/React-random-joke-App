@@ -1,4 +1,4 @@
-<h1>React Dad Joke Web Application</h1>
+<h1>React Dad Joke Web App</h1>
 
 <img width="429" alt="Screenshot 2023-12-16 161740" src="https://github.com/ViNu-23/React-random-joke-App/assets/59360964/73bd9753-65f1-4215-b2ac-ce43b6e80303">
      
